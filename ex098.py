@@ -4,7 +4,8 @@ def contador(inicio, fim, razão):
     print(f'Contagem de {inicio} até {fim} de {razão} em {razão}')
     i = inicio
     while True:
-        print(f'{i} ', end='')
+        print(f'{i} ', end='', flush=True)
+        sleep(0.5)
         if razão < 0:
             razão = razão * -1
         if fim < inicio:
